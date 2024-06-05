@@ -1,0 +1,72 @@
+.cardDiv div{
+  display:flex; 
+  max-width: 500px;
+  border: 1px solid black; 
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+
+  text-align: center
+
+
+}
+.CurrentStaffCard{
+  flex:1;
+  margin:10px;
+  padding:10px;
+  border:1px solid gray;
+  text-align:center;
+  display: inline-block; 
+
+  height: 240px;
+
+  border-radius: 15px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+  vertical-align: top;
+  justify-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 12%;
+
+}
+
+.pfp{
+  /*height:13%;*/
+  height: 90px;
+  width: auto;
+  max-width: 120px;
+  border-radius: 5px;
+}
+
+@media(max-width:800px){
+  .CurrentStaffCard{
+    max-width: 100px;
+    display:-moz-inline-stack; 
+    font-size: 12pt;
+
+  }
+  #leftpannel div{
+    font-size: 12pt;
+  }
+  #rightPanel{
+    font-size: 12pt; 
+  }
+  #content{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .CurrentStaffCard{
+    width: 60%;
+    height: 300px;
+  }
+  .pfp{
+    /*height:40%;*/
+    height: 80px;
+    width: auto;
+    max-width: 80px;
+    border-radius: 5px;
+
+  }
+}

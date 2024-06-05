@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="Explore.css" rel="stylesheet" type="text/css" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body onload="init()">
+<section class="TTSubPagesHeader"> 
+    <span>
+      <p> 
+        <span style="margin-left: 4em;">TIKTALK
+        <img style="height: 0.9em;" src="tikTalkLogo.png"> 
+        </span>
+        /   Explore
+      </p>
+    </span>
+</section>
+
+  
+  <!--NAV BAR-->
+  <section  style="display:flex; margin-left: 4em; margin-right: 4em;">
+  <div style="flex:1;"> 
+    <ul style="overflow: hidden;">
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown dropdownChoices">
+        <a class="dropdownChoices" href="Explore.html" class="dropbtn" style="color: black;" >Explore</a>
+        <div class="dropdown-content">
+          <a href="Explore.html">Explore</a> 
+          <a href="Explore.html#newsletter">Newsletters</a>
+          <a href="Explore.html#editions">Archived Editions</a>
+        </div>
+      </li>
+      <li><a href="CurrentEdition.html">Current Edition</a></li>
+      <li><a href="AboutUs.html">About Us</a></li> 
+
+
+    </ul>
+  </div>
+  <div style="flex:1;"> </div>
+  </section>
+  
+<!--Featured Newsletters-->
+<section class="FeaturedNewslettersParentDiv"> 
+  <div style="flex:1;padding: 20pt;"> 
+   <h2 id="newsletter"> Featured Newsletters</h2>
+    <!--KEYWORDS Start-->
+    
+
+
+                  
+            <!--    <input type="text" onclick="Search()" value="" placeholder="Enter Keywords.."> -->
+                
+    
+    <hr>
+    <button type="button" id="Atrocity" onclick="filterBy1Category(this.id)">Atrocity</button>
+
+
+    <button type="button" id="ArtsAndCulture" onclick="filterBy1Category()">ArtsAndCulture</button>
+    <button type="button" id="BusinessAndFinance" onclick="filterBy1Category()" >BusinessAndFinance</button>
+    <button type="button" id="DomesticAffairs" onclick="filterBy1Category()">DomesticAffairs</button>
+    <button type="button" id="Education" onclick="filterBy1Category()">Education</button>
+    <button type="button" id="Environmental" onclick="filterBy1Category()">Environmental</button>
+    <button type="button" id="GlobalAffairs" onclick="filterBy1Category()">GlobalAffairs</button>
+    <button type="button" id="HealthAndWellbeing" onclick="filterBy1Category()">HealthAndWellbeing</button>
+    <button type="button" id="HumanitarianAidAndDevelopment" onclick="filterBy1Category()">HumanitarianAidAndDevelopment</button>
+    <button type="button" id="LawAndJustice" onclick="filterBy1Category(this.id)">LawAndJustice</button>
+    <button type="button" id="PopCulture" onclick="filterBy1Category(this.id)">PopCulture</button>
+    <button type="button" id="ScienceAndTechnology" onclick="filterBy1Category(this.id)">ScienceAndTechnology</button>
+    <button type="button" id="SongRecommendation"  onclick="filterBy1Category(this.id)">SongRecommendation</button>
+    <button type="button" id="Sports" onclick="filterBy1Category(this.id)">Sports</button> 
+    <!--CATEGORIES-->
+    <div>Categories</div>
+    <form action="/action_page.php">
+      <input type="checkbox" id="category1" name="inlineCheckbox1" value="Atrocity">
+      <label for="category1">Atrocity</label><br>
+      <input type="checkbox" id="category2" name="inlineCheckbox1" value="ArtsAndCulture">
+      <label for="category2">ArtsAndCulture</label><br>
+      <input type="checkbox" id="category3" name="inlineCheckbox1" value="BusinessAndFinance">
+      <label for="category3">BusinessAndFinance</label><br>
+      <input type="checkbox" id="category4" name="inlineCheckbox1" value="DomesticAffairs">
+      <label for="category4">DomesticAffairs</label><br>
+      <input type="checkbox" id="category5" name="inlineCheckbox1" value="Education">
+      <label for="category5">Education</label><br>
+      <input type="checkbox" id="category6" name="inlineCheckbox1" value="Environmental">
+      <label for="category6">Environmental</label><br>
+      <input type="checkbox" id="category7" name="inlineCheckbox1" value="GlobalAffairs">
+      <label for="category7">GlobalAffairs</label><br>
+      <input type="checkbox" id="category8" name="inlineCheckbox1" value="HealthAndWellbeing">
+      <label for="category8">HealthAndWellbeing</label><br>
+      <input type="checkbox" id="category9" name="inlineCheckbox1" value="HumanitarianAidAndDevelopment">
+      <label for="category9">HumanitarianAidAndDevelopment</label><br> 
+      <input type="checkbox" id="category10" name="inlineCheckbox1" value="LawAndJustice">
+      <label for="category10">LawAndJustice</label><br>
+      <input type="checkbox" id="category11" name="inlineCheckbox1" value="PopCulture">
+      <label for="category11">PopCulture</label><br>
+      <input type="checkbox" id="category12" name="inlineCheckbox1" value="ScienceAndTechnology">
+      <label for="category12">ScienceAndTechnology</label><br>
+      <input type="checkbox" id="category13" name="inlineCheckbox1" value="SongRecommendation">
+      <label for="category13">SongRecommendation</label><br>
+      <input type="checkbox" id="category14" name="inlineCheckbox1" value="Sports">
+      <label for="category14">Sports</label><br><br>
+    </form>
+     <a class="button" onclick="filterByMultipleCategory()"> Search </a>
+  </div>
+ 
+  <!--RESULTS DIV-->
+
+  <div class="card" id="rightPanel" style="flex:2;padding-top: 1.9em; overflow-y: scroll;
+    max-height:600px;" >
+
+    <div id="result"></div>
+    <div id="output" ></div>
+  </div>
+
+</section>
+
+<!--Archived EDITIONS-->
+  <section style="display: flex;margin-left: 4em;margin-right: 4em;"> 
+    <div style="flex:1;padding: 20pt;"> 
+     <h2 id="editions"> Archived Editions</h2>
+      
+      <button type="button" class="collapsible">February 2024</button>
+      <div class="content">
+        <ol>
+          <li><a href="Explore.html#editions">Edition #1 Week of 2/4-2/10</a></li>
+          <li><a href="Explore.html#editions">Edition #2 Week of 2/11-2/17</a></li>
+          <li><a href="Explore.html#editions">Edition #3 Week of 2/18-2/24</a></li>
+          <li><a href="Explore.html#editions">Edition #4 Week of 2/25-3/2</a></li>
+        </ol>
+      </div> 
+      <button type="button" class="collapsible">March 2024</button>
+      <div class="content">
+        <ol>
+          <li><a href="Explore.html#editions">Edition #5 Week of 3/3-3/9</a></li>
+          <li><a href="Explore.html#editions">Edition #6 Week of 3/10-3/16</a></li>
+          <li><a href="Explore.html#editions">Edition #7 Week of 3/17-3/23</a></li>
+          <li><a href="Explore.html#editions">Edition #8 Week of 3/24-3/30</a></li>
+          <li><a href="Explore.html#editions">Edition #9 Week of 3/31-4/6</a></li>
+        </ol>
+      </div>
+      <button type="button" class="collapsible">April 2024</button>
+      <div class="content">
+        <ol>
+          <li><a href="Explore.html#editions">Edition #10 Week of 4/7-4/13</a></li>
+          <li><a href="Explore.html#editions">Edition #11 Week of 4/14-4/20</a></li>
+          <li><a href="Explore.html#editions">Edition #12 Week of 4/21-4/27</a></li>
+          <li><a href="Explore.html#editions">Edition #13 Week of 4/28-5/4</a></li>
+        </ol>
+      </div>
+      <button type="button" class="collapsible">May 2024</button>
+      <div class="content">
+        <ol>
+          <li><a href="Explore.html#editions">Edition #14 Week of 5/5-5/11</a></li>
+          <li><a href="Explore.html#editions"onclick="E15()" >Edition #15 Week of 5/12-5/18</a></li>
+          <li><a href="Explore.html#editions" onclick="E16()" >Edition #16 Week of 5/19-5/25</a></li>
+        </ol>
+      </div>
+
+
+
+
+      
+      
+    </div>
+
+    <!--RESULTS DIV-->
+    <div style="flex:2;"> 
+        
+
+      <div class="EditionsOverflowDiv" >
+        <div id=EditionsImg><img id=CEI1  class="EditionsImg" src="CurrentEditionImg/CEImg1.png"> </div>
+        <div> <img id=CEI2 class="EditionsImg" src="CurrentEditionImg/CEImg2.png"></div>
+        
+    </div>
+
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<footer style="display:flex;"> 
+    <div style="flex:1;margin-left:3em"> 
+      <div> 
+        <h2>TIKTALK
+            <img style="height: 0.9em;" src="tikTalkLogo.png"> 
+        </h2>
+        <br> 
+              Released weekly on Monday, our newsletter is a two/three-minute read that summarizes the news from the previous week. We hope that this newsletter will encourage thoughtful conversations and tiktalking about the current news.   
+      </div> 
+    </div>
+
+    <div style="  flex-direction: column;max-width: 30%;"> 
+      <h2>Latest Newsletters</h2>
+          <section> 
+            <!--Latest Newseltter div #1-->
+            <div class="LatestNewsletterParentDiv"> 
+            <a href="https://stackoverflow.com/questions/13525333/how-do-i-position-two-divs-horizontally-next-to-each-other"> 
+            <div style="display:block;"> 
+                <img class="LNImg" src="FooterImg/FooterImg1.jpg">
+            </div>
+            </a>
+              <a href="https://stackoverflow.com/questions/13525333/how-do-i-position-two-divs-horizontally-next-to-each-other">
+                <div class="LNRightChildDiv">  
+                  <span style="font-size: 14pt;">Newsletter Edition 10</span><br> President Biden and former President Trump have agreed to debate each other on June 27th... 
+                </div>
+              </a>
+            </div>
+            <!--Latest Newseltter div #2-->
+            <div class="LatestNewsletterParentDiv"> 
+              <a href="https://stackoverflow.com/questions/13525333/how-do-i-position-two-divs-horizontally-next-to-each-other"> 
+              <div style="display:block;"> 
+                  <img class="LNImg" src="FooterImg/FooterImg1.jpg">
+              </div>
+              </a>
+              <a href="https://stackoverflow.com/questions/13525333/how-do-i-position-two-divs-horizontally-next-to-each-other">
+                <div class="LNRightChildDiv">  
+                  <span style="font-size: 14pt;">Newsletter Edition 10</span><br> President Biden and former President Trump have agreed to debate each other on June 27th... 
+                </div>
+              </a>
+              </div>
+            <!--End of Latest Newsletter divs-->
+          </section>
+    </div>
+
+    <div style="flex:1;"> 
+      <h2>Quick Links</h2>
+          <ol>
+            <li><a href="default.asp">Home</a></li>
+            <li><a href="news.asp">About Us</a></li>
+            <li><a href="contact.asp">Current Newsletter</a></li>
+            <li><a href="about.asp">Newsletters</a></li>
+             <li><a href="about.asp">Contact Us</a></li>
+          </ol>
+    </div>
+
+    <div style="flex:1;"> 
+      <h2>Have a question?</h2>
+        <ol>
+          <li><a href="default.asp">InsertInstaHandle</a></li>
+          <li><a href="news.asp">tiktalkieteam@gmail.com</a></li>
+        </ol>
+    </div>
+
+  </footer>
+
+
+
+
+
+
+            
+  <script src="script.js"></script>
+  <script src="Explore.js"></script>
+ 
+  <!--Script js file last, to ensure html loads first, then execute js file-->
+
+</body>
+
+</html>

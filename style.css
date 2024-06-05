@@ -1,0 +1,117 @@
+html {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+.centered{
+  text-align: center;
+}
+a{
+  text-decoration: none;
+}
+
+.TTSubPagesHeader{
+  background: #efebeb;
+  padding: 8px 15px 3px;
+  position: relative;
+  text-align: left;
+
+}
+ol{
+padding:0pt
+} 
+
+/*NAV BAR -> START*/
+ul {
+  list-style-type: none; /*list styling none erases dashes/dots/ styling in front list item*/
+  margin-top: 30pt;
+  padding: 0;
+  display: table; /*Display table allows element to display as a table, allowing inside elements to mimick table rolls and cells thus the equal spacing between elements (a href)*/
+  width: 100%;
+  list-style: none;
+  text-align: center;
+}
+li{
+  display: table-cell;
+  text-align: center;
+  
+}
+li a{
+  display: block;
+  text-decoration: none;
+  color: black;
+  border-bottom: 2px solid transparent;
+}
+
+/*EXPLORE nav bar styling*/
+.dropdownChoices{
+  display:inline-block;
+  color: white;
+  
+  text-decoration: none;
+}
+li a:hover, .dropdown:hover .dropbtn {
+  border-bottom: 2px solid #906060;
+}
+li.dropdown {
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+/*FOOTER STYLING*/
+footer{
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 50px;
+  color: #191a19;
+  background-color: #f1f8f8;
+  border-top: 1px solid #373434;
+}
+.LatestNewsletterParentDiv{
+  display:flex;flex-direction:row;
+  margin: 10pt;
+}
+.LNRightChildDiv{
+flex:1;display:block;
+  padding-left: 15pt;
+}
+.LNImg{
+  height:4.5rem;
+  border-radius: 3pt;
+}
+ol{
+  margin-top: 15pt;
+}
+ol li{
+  display:block;
+  padding: 0.5em;
+  text-align: left;
+}
+
+
+
+
+
