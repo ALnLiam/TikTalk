@@ -12,7 +12,7 @@ a{
 
 .TTSubPagesHeader{
   background: #efebeb;
-  padding: 8px 15px 3px;
+  padding: 8px 15px 3px !important;
   position: relative;
   text-align: left;
 

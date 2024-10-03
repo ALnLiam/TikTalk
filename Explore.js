@@ -26,9 +26,10 @@ function filterByMultipleCategory(){
   generateCards(fufilledCategory);
   result.innerHTML = `${ct} Results found.`
  }
-
+//NBC need multiple records in json as for same newsletter as each with have a different category
 
 //SEARCH FUNCTION
+//Note: Can't use NBCNewsletter.json as it will only return at most 1 result : Use NEWSLETTER.json
 function filter(){
   let Title = document.getElementById("Title").value;
   console.log("Title");
@@ -67,7 +68,7 @@ function filter(){
 
 
 
-//switch pages when clicked on 
+//switch pages when clicked on , without refreshing entire screen
 function a(EditionNum){
   document.getElementById("CEI1").src = "Archived/E"+EditionNum+"(1).png";
   document.getElementById("CEI2").src = "Archived/E"+EditionNum+"(2).png";

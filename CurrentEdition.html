@@ -6,17 +6,25 @@
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
+  
+
+
+  
+  <link href="components.css" rel="stylesheet" type="text/css" />
+  <link href="index.css" rel="stylesheet" type="text/css" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <script src="components.js"></script> 
 </head>
 
-<body>
+<body onload="init1()">
 <section class="TTSubPagesHeader"> 
     <span>
       <p> 
         <span style="margin-left: 4em;">TIKTALK
         <img style="height: 0.9em;" src="tikTalkLogo.png"> 
         </span>
-        /   Current Edition
+        /   More
       </p>
     </span>
 </section>
@@ -34,7 +42,7 @@
           <a href="Explore.html#editions">Archived Editions</a>
         </div>
       </li>
-      <li><a href="CurrentEdition.html">Current Edition</a></li>
+      <li><a href="CurrentEdition.html">More</a></li>
       <li><a href="AboutUs.html">About Us</a></li> 
 
 
@@ -44,66 +52,21 @@
   </section>
 
     
-<main> 
-    
+
+
+
+
+<main>
   
-<h2 style="margin-top: 45pt;margin-left: 4em;margin-right: 4em;" >Newsletter Edition #16</h2>
-  <div style="display: flex;"> <!--Parent Div-->
-      <div class="leftPannel"> </div>
-        <div class="overflowing-div">
-          <div class="currentMagImgDiv">  <img class="magImg" src=CurrentEditionImg/CEImg1.png>
-          </div>
-          <div class="currentMagImgDiv">  <img class="magImg" src=CurrentEditionImg/CEImg2.png>
-          </div>
-        </div>
-      <div class="rightPannel"></div>
+  <!--MANSORY LAYOUT-->
+  <div class="boxes-con" id="row">
+    <div class="column" id="column1">  </div>
+    <div class="column" id="column2">  </div>
+    <div class="column" id="column3">  </div>
   </div>
-</main>
-
-
-
-
+ 
   
-
-  <style>
-    .leftPannel{
-      display:flex; 
-      flex:1; 
-      padding: 10pt; 
-      flex-direction: column;
-
-    }
-    .rightPannel{
-      display:flex; 
-      flex:1; 
-      padding: 10pt; 
-      flex-direction: column;
-    } 
-    .magImg{
-      margin: auto;
-      display: block;
-       max-width: 870px;
-
-    }
-    .overflowing-div{
-      height: 500pt;
-      overflow: auto;
-      overflow-x: hidden;
-      overflow-y: scroll; 
-      border: 1px solid black;
-      padding: 2pt; 
-      display: flex;
-      flex-direction: column;
-      flex: 12;
-      padding-bottom: 20pt;
-      padding-top: 20pt;
-      margin-bottom: 30pt;
-      background-color: #d1cccc;
-    }
-    
-  </style>
-  
-  
+</main>  
   
   
   
@@ -181,6 +144,7 @@
 
 
   <script src="script.js"></script>
+  <script src="index.js"></script>
   <!--Script js file last, to ensure html loads first, then execute js file-->
 
 </body>

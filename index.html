@@ -15,7 +15,15 @@
   
 
 <body onload="init1()">
- 
+
+
+
+
+
+
+
+
+  
 <section class="TTHeader"> 
     <span>
       <p> 
@@ -34,7 +42,7 @@
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="Explore.html">Explore</a> </li>
-    <li><a href="CurrentEdition.html">Current Edition</a></li>
+    <li><a href="CurrentEdition.html">More</a></li>
     <!-- <li><a href="Explore.html#newsletter">Newsletters</a></li>
     <li><a href="Explore.html#editions">Archived Editions</a></li> -->
     <li><a href="AboutUs.html">About Us</a></li>   
@@ -44,38 +52,115 @@
 
 
 
-  <!--MANSORY LAYOUT-->
-  <div class="boxes-con" id="row">
-    <div class="column" id="column1">  </div>
-    <div class="column" id="column2">  </div>
-    <div class="column" id="column3">  </div>
+  <main> 
+  <h2 style="margin-top: 45pt;margin-left: 4em;margin-right: 4em;" >Newsletter Edition #16</h2>
+  <div style="display: flex;"> <!--Parent Div-->
+      <div class="leftPannel"> </div>
+        <div class="overflowing-div">
+          <div class="currentMagImgDiv">  <img class="magImg" src=CurrentEditionImg/CEImg1.png>
+          </div>
+          <div class="currentMagImgDiv">  <img class="magImg" src=CurrentEditionImg/CEImg2.png>
+          </div>
+        </div>
+      <div class="rightPannel"></div>
   </div>
+  </main>
   
+  <style>
+    .leftPannel{
+      display:flex; 
+      flex:1; 
+      padding: 10pt; 
+      flex-direction: column;
 
-  <section class="centered NCSection"> 
-  <h1 class="centered NCH1"> Newsletter Categories </h1>
-      
-     <button type="button" id="Atrocity" onclick="filterBy1Category(this.id)"> Atrocity</button>
-    
-    
-    <button type="button" id="ArtsAndCulture" onclick="filterBy1Category()">ArtsAndCulture</button>
-    <button type="button" id="BusinessAndFinance" onclick="filterBy1Category()" >BusinessAndFinance</button>
-    <button type="button" id="DomesticAffairs" onclick="filterBy1Category()">DomesticAffairs</button>
-    <button type="button" id="Education" onclick="filterBy1Category()">Education</button>
-    <button type="button" id="Environmental" onclick="filterBy1Category()">Environmental</button>
-    <button type="button" id="GlobalAffairs" onclick="filterBy1Category()">GlobalAffairs</button>
-    <button type="button" id="HealthAndWellbeing" onclick="filterBy1Category()">HealthAndWellbeing</button>
-    <button type="button" id="HumanitarianAidAndDevelopment" onclick="filterBy1Category()">HumanitarianAidAndDevelopment</button>
-    <button type="button" id="LawAndJustice" onclick="filterBy1Category(this.id)">LawAndJustice</button>
-    <button type="button" id="PopCulture" onclick="filterBy1Category(this.id)">PopCulture</button>
-    <button type="button" id="ScienceAndTechnology" onclick="filterBy1Category(this.id)">ScienceAndTechnology</button>
-    <button type="button" id="SongRecommendation"  onclick="filterBy1Category(this.id)">SongRecommendation</button>
-    <button type="button" id="Sports" onclick="filterBy1Category(this.id)">Sports</button>
-    
+    }
+    .rightPannel{
+      display:flex; 
+      flex:1; 
+      padding: 10pt; 
+      flex-direction: column;
+    } 
+    .magImg{
+      margin: auto;
+      display: block;
+       max-width: 870px;
+
+    }
+    .overflowing-div{
+      height: 500pt;
+      overflow: auto;
+      overflow-x: hidden;
+      overflow-y: scroll; 
+      border: 1px solid black;
+      padding: 2pt; 
+      display: flex;
+      flex-direction: column;
+      flex: 12;
+      padding-bottom: 20pt;
+      padding-top: 20pt;
+      margin-bottom: 30pt;
+      background-color: #d1cccc;
+    }
+  </style> 
+
+
+
+
+<div>
+  <p style="margin-bottom: 0.2em;" class="centered NCH1"> Subscribe to Our Newsletter </p>
+  <section class="centered NCSection iframe-container" style="margin-top: 0em;"> 
+      <iframe src="https://ggggs-newsletter-ec1ec6.beehiiv.com/subscribe" 
+              width="100%" 
+              height="400" 
+        scrolling="no" class="fp-iframe"
+    style="border: none;">
+      </iframe>
+</div>
+
   
+  <style>
+
+
+
+    .iframe-container {
+        width: 50%; /* Desired width of the visible area */
+        height: 10em; /* Desired height of the visible area */
+        overflow: hidden; /* Hide overflow to create zoom effect */
+        position: relative;
+      margin-left: auto; /*Centers it (1/2)*/
+      margin-right: auto;/*Centers it (2/2)*/
+        border: 1px solid #ccc; /* Optional border */
+      border-radius: 25px;
+      display: flex;
+      
+    }
+
+    .iframe-container iframe {
+        position: absolute;
+
+       top: -13em; /* Adjust this to shift the view up/down */
+      left: 0%; /* Adjust this to shift the view left/right */
+
+      /* transform-origin:box default; */ /* Set the origin for scaling */
+      
+    }
+  </style>
   </section>
   
 
+
+
+
+
+
+
+
+
+
+
+
+  
+  
 <footer style="display:flex;"> 
     <div style="flex:1;margin-left:3em"> 
       <div> 
@@ -141,7 +226,7 @@
   </footer>
 
 
-  
+  <!--not needed for previous current publcation page-->
   <script src="script.js"></script>
   <script src="index.js"></script>
 </body>

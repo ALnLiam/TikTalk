@@ -15,7 +15,7 @@ function init1(){
 }
 
 
-//(1)dividing objects in the FrontPage.json into 3 subarrays 
+//(1)dividing objects in the FrontPage.json into 3 subarrays(MANSORY)
 function createSubarrays(data){
   var arrays = [];
   let size = data.length /3 ;
@@ -30,7 +30,7 @@ function createSubarrays(data){
   subArray3 = arrays[2];
 }
 
-//(2)generating cards for each subarray onload 
+//(2)generating cards for each subarray onload (MANSORY)
 function generateCards(){ 
   output1 = document.getElementById("column1");
   output2 = document.getElementById("column2");
