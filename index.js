@@ -1,5 +1,6 @@
 
 let card; 
+//index.js
 let subArray1,subArray2,subArray3;
 let output1,output2,output3; 
 function init1(){
@@ -13,6 +14,8 @@ function init1(){
   generateCards();
 
 }
+
+
 
 
 //(1)dividing objects in the FrontPage.json into 3 subarrays(MANSORY)
@@ -101,7 +104,6 @@ function generateCards(){
 
 
 }
-
 
 
 

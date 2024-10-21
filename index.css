@@ -4,11 +4,13 @@ html {
 }
 
 .TTHeader{
-  background: #efebeb;
-  border-bottom: 1px solid #fffafa;
+  background:/* #efebeb;*/  #7d6fc4;
+  border-bottom: 1px solid whitesmoke;
   padding: 8px 15px 3px;
   position: relative;
   text-align: center;
+  color:whitesmoke;
+  
 }
 .h1{
   font-size: 40pt;

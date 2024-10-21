@@ -28,6 +28,12 @@ function filterByMultipleCategory(){
  }
 //NBC need multiple records in json as for same newsletter as each with have a different category
 
+
+
+
+
+
+
 //SEARCH FUNCTION
 //Note: Can't use NBCNewsletter.json as it will only return at most 1 result : Use NEWSLETTER.json
 function filter(){

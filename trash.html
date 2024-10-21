@@ -1,0 +1,50 @@
+<main> 
+  <h2 style="margin-top: 45pt;margin-left: 4em;margin-right: 4em;" >Newsletter Edition #16</h2>
+  <div style="display: flex;"> <!--Parent Div-->
+      <div class="leftPannel"> </div>
+        <div class="overflowing-div">
+          <div class="currentMagImgDiv">  <img class="magImg" src=CurrentEditionImg/CEImg1.png>
+          </div>
+          <div class="currentMagImgDiv">  <img class="magImg" src=CurrentEditionImg/CEImg2.png>
+          </div>
+        </div>
+      <div class="rightPannel"></div>
+  </div>
+  </main>
+
+  <style>
+    .leftPannel{
+      display:flex; 
+      flex:1; 
+      padding: 10pt; 
+      flex-direction: column;
+
+    }
+    .rightPannel{
+      display:flex; 
+      flex:1; 
+      padding: 10pt; 
+      flex-direction: column;
+    } 
+    .magImg{
+      margin: auto;
+      display: block;
+       max-width: 870px;
+
+    }
+    .overflowing-div{
+      height: 500pt;
+      overflow: auto;
+      overflow-x: hidden;
+      overflow-y: scroll; 
+      border: 1px solid black;
+      padding: 2pt; 
+      display: flex;
+      flex-direction: column;
+      flex: 12;
+      padding-bottom: 20pt;
+      padding-top: 20pt;
+      margin-bottom: 30pt;
+      background-color: #d1cccc;
+    }
+  </style> 

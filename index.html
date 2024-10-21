@@ -16,137 +16,154 @@
 
 <body onload="init1()">
 
-
-
-
+<hr style="background-color:  #632e6b; height: 0.5em; margin:0px;"> 
 
 
 
 
   
-<section class="TTHeader"> 
+<section class="TTHeader" style="margin-top: 0px;"> 
     <span>
       <p> 
-        <span class="h1">TIKTALK
+        <span class="h1" style="text-shadow: 2px 2px 5px darkpurple;  font-weight: lighter">TIKTALK 
         <img style="height: 0.9em;" src="tikTalkLogo.png"> 
         </span>
   <!--The unit em scales the object relative to the size of the surrounding font, so 2em would be 2 times the current fon is the height of the logo -->
       <br> 
-      Released weekly on Mondays
+      <span style="text-shadow: none;">Released weekly on Mondays </span>
       </p>
     </span>
 </section>
 
+
+
+
 <!--Nav Bar-->
 <section style="margin-left: 4em; margin-right: 4em;"> 
   <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="Explore.html">Explore</a> </li>
-    <li><a href="CurrentEdition.html">More</a></li>
+    <li><div class="txtBoxContainer"><img style="z-index:2; height:3em;"src="BlueTxTBox.png"><div class="centeredTxT"><a href="index.html">Home</a></div></div></li>
+    <li><div class="txtBoxContainer"><img style="z-index:2; height:3em;"src="PurpleTxtBox.png"><div class="centeredTxT"><a href="Explore.html">Explore</a></div></div></li>
+    <li><div class="txtBoxContainer"><img style="z-index:2; height:3em;"src="RedTxTBox.png"><div class="centeredTxT"><a href="CurrentEdition.html">More</a></div></div></li>
+
     <!-- <li><a href="Explore.html#newsletter">Newsletters</a></li>
     <li><a href="Explore.html#editions">Archived Editions</a></li> -->
-    <li><a href="AboutUs.html">About Us</a></li>   
+    <!-- <li><a href="AboutUs.html">About Us</a></li>   -->
   </ul>
 </section>
 <br> 
 
 
+  <!--Archived EDITIONS-->
+  <section style="display: flex;margin-left: 4em;margin-right: 4em;"> 
+    <div style="flex:1;padding: 20pt;"> 
+     <h2 id="editions"> Archived Editions</h2>
 
-  <main> 
-  <h2 style="margin-top: 45pt;margin-left: 4em;margin-right: 4em;" >Newsletter Edition #16</h2>
-  <div style="display: flex;"> <!--Parent Div-->
-      <div class="leftPannel"> </div>
-        <div class="overflowing-div">
-          <div class="currentMagImgDiv">  <img class="magImg" src=CurrentEditionImg/CEImg1.png>
-          </div>
-          <div class="currentMagImgDiv">  <img class="magImg" src=CurrentEditionImg/CEImg2.png>
-          </div>
-        </div>
-      <div class="rightPannel"></div>
-  </div>
-  </main>
-  
-  <style>
-    .leftPannel{
-      display:flex; 
-      flex:1; 
-      padding: 10pt; 
-      flex-direction: column;
-
-    }
-    .rightPannel{
-      display:flex; 
-      flex:1; 
-      padding: 10pt; 
-      flex-direction: column;
-    } 
-    .magImg{
-      margin: auto;
-      display: block;
-       max-width: 870px;
-
-    }
-    .overflowing-div{
-      height: 500pt;
-      overflow: auto;
-      overflow-x: hidden;
-      overflow-y: scroll; 
-      border: 1px solid black;
-      padding: 2pt; 
-      display: flex;
-      flex-direction: column;
-      flex: 12;
-      padding-bottom: 20pt;
-      padding-top: 20pt;
-      margin-bottom: 30pt;
-      background-color: #d1cccc;
-    }
-  </style> 
+      <button type="button" class="collapsible">February 2024</button>
+      <div class="content">
+        <ol>
+          <li><p onclick="a(1)">Edition #1 Week of 2/4-2/10</p></li>
+          <li><p onclick="a(2)">Edition #2 Week of 2/11-2/17</p></li>
+          <li><p onclick="a(3)">Edition #3 Week of 2/18-2/24</p></li>
+          <li><p onclick="a(4)">Edition #4 Week of 2/25-3/2</p></li>
+        </ol>
+      </div> 
+      <button type="button" class="collapsible">March 2024</button>
+      <div class="content">
+        <ol>
+          <li><p onclick="a(5)">Edition #5 Week of 3/3-3/9</p></li>
+          <li><p onclick="a(6)">Edition #6 Week of 3/10-3/16</p></li>
+          <li><p onclick="a(7)">Edition #7 Week of 3/17-3/23</p></li>
+          <li><p onclick="a(8)">Edition #8 Week of 3/24-3/30</p></li>
+          <li><p onclick="a(9)">Edition #9 Week of 3/31-4/6</p></li>
+        </ol>
+      </div>
+      <button type="button" class="collapsible">April 2024</button>
+      <div class="content">
+        <ol>
+          <li><p onclick="a(10)">Edition #10 Week of 4/7-4/13</p></li>
+          <li><p onclick="a(11)">Edition #11 Week of 4/14-4/20</p></li>
+          <li><p onclick="a(12)">Edition #12 Week of 4/21-4/27</p></li>
+          <li><p onclick="a(13)">Edition #13 Week of 4/28-5/4</p></li>
+        </ol>
+      </div>
+      <button type="button" class="collapsible">May 2024</button>
+      <div class="content">
+        <ol>
+          <li><p onclick="a(14)">Edition #14 Week of 5/5-5/11</p></li>
+          <li><p onclick="a(15)">Edition #15 Week of 5/12-5/18</p></li>
+          <li><p onclick="a(16)">Edition #16 Week of 5/19-5/25</p></li>
+        </ol>
+      </div>
 
 
 
 
-<div>
-  <p style="margin-bottom: 0.2em;" class="centered NCH1"> Subscribe to Our Newsletter </p>
-  <section class="centered NCSection iframe-container" style="margin-top: 0em;"> 
-      <iframe src="https://ggggs-newsletter-ec1ec6.beehiiv.com/subscribe" 
-              width="100%" 
-              height="400" 
-        scrolling="no" class="fp-iframe"
-    style="border: none;">
-      </iframe>
-</div>
-
-  
-  <style>
 
 
+    </div>
 
-    .iframe-container {
-        width: 50%; /* Desired width of the visible area */
-        height: 10em; /* Desired height of the visible area */
-        overflow: hidden; /* Hide overflow to create zoom effect */
-        position: relative;
-      margin-left: auto; /*Centers it (1/2)*/
-      margin-right: auto;/*Centers it (2/2)*/
-        border: 1px solid #ccc; /* Optional border */
-      border-radius: 25px;
-      display: flex;
-      
-    }
+    <!--RESULTS DIV-->
+    <div style="flex:2;"> 
 
-    .iframe-container iframe {
-        position: absolute;
 
-       top: -13em; /* Adjust this to shift the view up/down */
-      left: 0%; /* Adjust this to shift the view left/right */
+      <div class="EditionsOverflowDiv" >
+        <div id=EditionsImg><img id=CEI1  class="EditionsImg" src="CurrentEditionImg/CEImg1.png"> </div>
+        <div> <img id=CEI2 class="EditionsImg" src="CurrentEditionImg/CEImg2.png"></div>
 
-      /* transform-origin:box default; */ /* Set the origin for scaling */
-      
-    }
-  </style>
+    </div>
+
   </section>
-  
+
+<style>
+  .collapsible {
+    color: #201e1e;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: right;
+    outline: none;
+    font-size: 15px;
+  }
+  .active, .collapsible:hover {
+     background-color: #ccc;
+  }
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+
+  .EditionsOverflowDiv{
+    background-color: #e1d9d5;
+    width: 50em;
+    height: 40em;
+    border: 1px solid black;
+    margin-right: 2em;
+    margin-left: 2em;
+    overflow-y: scroll;
+    margin-top: 4em;
+  }
+  .EditionsImg{
+    width: 90%;
+    height: auto;
+    border-radius: 3pt;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+</style>  
+
+
+
+
+
+
+
 
 
 
@@ -209,7 +226,7 @@
       <h2>Quick Links</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li><a href="AboutUs.html">About Us</a></li>
+          <!--  <li><a href="AboutUs.html">About Us</a></li> -->
             <li><a href="CurrentEdition.html">Current Newsletter</a></li>
             <li><a href="Explore.html">Newsletters</a></li>
           </ol>
@@ -225,7 +242,7 @@
 
   </footer>
 
-
+  <hr style="background-color: #7d6fc4; height: 0.5em; margin:0px;"> 
   <!--not needed for previous current publcation page-->
   <script src="script.js"></script>
   <script src="index.js"></script>

@@ -1,8 +1,43 @@
+
+@font-face {
+  font-family: 'Tex Gyre Pagella';
+  src:    url('tex-gyre-pagella.regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tex Gyre Pagella';
+  src: url('fonts/texgyrepagella-bold.woff2') format('woff2'),
+       url('fonts/texgyrepagella-bold.woff') format('woff'),
+       url('fonts/texgyrepagella-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 html {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  background-image:url(grainyBG.jpg);
+  background-repeat:repeat;
+  background-size: 10%;
+  font-family: 'Tex Gyre Pagella', serif;;
+  overflow-y:none;
+  /*
+  #8a3d96
+  #803b8b
+  #5946b5
+  purple 
+
+
+  #004aad
+  */
 }
+
+
+
+
 .centered{
   text-align: center;
 }
@@ -11,7 +46,9 @@ a{
 }
 
 .TTSubPagesHeader{
-  background: #efebeb;
+  color:white;
+  background-color: #632e6b  /*#803b8b*/ /*#efebeb*/;
+  
   padding: 8px 15px 3px !important;
   position: relative;
   text-align: left;
@@ -43,6 +80,18 @@ li a{
   border-bottom: 2px solid transparent;
 }
 
+.txtBoxContainer{
+  position: relative;
+  text-align: center;
+}
+
+.centeredTxT {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
 /*EXPLORE nav bar styling*/
 .dropdownChoices{
   display:inline-block;
@@ -51,7 +100,7 @@ li a{
   text-decoration: none;
 }
 li a:hover, .dropdown:hover .dropbtn {
-  border-bottom: 2px solid #906060;
+  border-bottom: 2px solid #5946b5; /* #906060*/
 }
 li.dropdown {
   display: inline-block;
@@ -81,14 +130,16 @@ li.dropdown {
 
 /*FOOTER STYLING*/
 footer{
+  margin-top: 10em;
   width: 100%;
   text-align: left;
   display: flex;
   flex-flow: row wrap;
   padding: 50px;
-  color: #191a19;
-  background-color: #f1f8f8;
-  border-top: 1px solid #373434;
+ 
+  background-color: #803b8b ; /*#f1f8f8; */
+  color: white /*rgb(58, 46, 46);*/ ;
+  border-top: 1px solid  #632e6b ;
 }
 .LatestNewsletterParentDiv{
   display:flex;flex-direction:row;
